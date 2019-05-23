@@ -6,11 +6,11 @@
 
 ### 写这篇文章的主要原因：有时候会用到一些不常用的方法，很容易被遗忘。所以想要详细的介绍iOS中字符串的相关用法。一方面加强自己的记忆，另一方面是节省去API中寻找的时间。如果觉得这篇文章现在用得到或者未来会用到，那就添加喜欢或者收藏起来嗷！
 
-####*如果发现不够完善的地方，可以在评论区评论或者私信我，我会尽快添加
+#### *如果发现不够完善的地方，可以在评论区评论或者私信我，我会尽快添加
 
-##[NSString（静态，纯文本Unicode字符串对象）](https://developer.apple.com/documentation/foundation/nsstring?language=objc)
+## [NSString（静态，纯文本Unicode字符串对象）](https://developer.apple.com/documentation/foundation/nsstring?language=objc)
 
-####创建和初始化字符串(Creating and Initializing Strings）
+#### 创建和初始化字符串(Creating and Initializing Strings）
 
  [+ string](https://developer.apple.com/documentation/foundation/nsstring/1497312-string?language=objc)
 返回空字符串（Returns an empty string.）
@@ -75,7 +75,7 @@
 [+ stringWithUTF8String:](https://developer.apple.com/documentation/foundation/nsstring/1497379-stringwithutf8string?language=objc)
 从给定的UTF8编码字节的C数组复制数据而创建的字符串（Returns a string created by copying the data from a given C array of UTF8-encoded bytes.）
 
-####从文件创建和初始化字符串（Creating and Initializing a String from a File）
+#### 从文件创建和初始化字符串（Creating and Initializing a String from a File）
 
 [+ stringWithContentsOfFile:encoding:error:](https://developer.apple.com/documentation/foundation/nsstring/1497327-stringwithcontentsoffile?language=objc)
 （Returns a string created by reading data from the file at a given path interpreted using a given encoding.）
@@ -89,7 +89,7 @@
 [- initWithContentsOfFile:usedEncoding:error:](https://developer.apple.com/documentation/foundation/nsstring/1418227-initwithcontentsoffile?language=objc)
 （Returns an NSString object initialized by reading data from the file at a given path and returns by reference the encoding used to interpret the characters.）
 
-####从URL创建和初始化字符串（Creating and Initializing a String from an URL）
+#### 从URL创建和初始化字符串（Creating and Initializing a String from an URL）
 
 [+ stringWithContentsOfURL:encoding:error:](https://developer.apple.com/documentation/foundation/nsstring/1497360-stringwithcontentsofurl?language=objc)
 通过读取使用给定编码的给定URL数据而创建的字符串（Returns a string created by reading data from a given URL interpreted using a given encoding.）
@@ -136,7 +136,7 @@
 [UIF8String](https://developer.apple.com/documentation/foundation/nsstring/1411189-utf8string?language=objc)
 （A null-terminated UTF8 representation of the string.）
 
-####识别和比较字符串(Identifying and Comparing Strings)
+#### 识别和比较字符串(Identifying and Comparing Strings)
 
 [- caseInsensitiveCompare:](https://developer.apple.com/documentation/foundation/nsstring/1414769-caseinsensitivecompare?language=objc)
 
@@ -177,7 +177,7 @@
 [NSStringEncodingConversionOptions](https://developer.apple.com/documentation/foundation/nsstringencodingconversionoptions?language=objc)
 （Options for converting string encodings.）
 
-####拼接字符串(Combining Strings)
+#### 拼接字符串(Combining Strings)
 
 [- stringByAppendingFormat:](https://developer.apple.com/documentation/foundation/nsstring/1497272-stringbyappendingformat?language=objc)
 （Returns a string made by appending to the receiver a string constructed from a given format string and the following arguments.）
@@ -188,7 +188,7 @@
 [- stringByPaddingToLength:withString:startingAtIndex:](https://developer.apple.com/documentation/foundation/nsstring/1416395-stringbypaddingtolength?language=objc)
 （Returns a new string formed from the receiver by either removing characters from the end, or by appending as many occurrences as necessary of a given pad string.）
 
-####字符串大小写（Changing Case）
+#### 字符串大小写（Changing Case）
 
 [lowercaseString](https://developer.apple.com/documentation/foundation/nsstring/1408467-lowercasestring?language=objc)
 小写字符串（A lowercase representation of the string.）
@@ -217,7 +217,7 @@
 [- capitalizedStringWithLocale:](https://developer.apple.com/documentation/foundation/nsstring/1414023-capitalizedstringwithlocale?language=objc)
 （Returns a capitalized representation of the receiver using the specified locale.）
 
-####字符串拆分（Dividing Strings）
+#### 字符串拆分（Dividing Strings）
 
 [- componentsSeparatedByString:](https://developer.apple.com/documentation/foundation/nsstring/1413214-componentsseparatedbystring?language=objc)
 （Returns an array containing substrings from the receiver that have been divided by a given separator.）
@@ -237,7 +237,7 @@
 [- substringToIndex:](https://developer.apple.com/documentation/foundation/nsstring/1408017-substringtoindex?language=objc)
 字符串截取范围是字符串开头到这个字符串给定索引index（Returns a new string containing the characters of the receiver up to, but not including, the one at a given index.）
 
-####规范化字符串（Normalizing Strings）
+#### 规范化字符串（Normalizing Strings）
 
 [decomposedStringWithCanonicalMapping](https://developer.apple.com/documentation/foundation/nsstring/1409474-decomposedstringwithcanonicalmap?language=objc)
 （A string made by normalizing the string’s contents using the Unicode Normalization Form D.）
@@ -251,12 +251,12 @@
 [precomposedStringWithCompatibilityMapping](https://developer.apple.com/documentation/foundation/nsstring/1412625-precomposedstringwithcompatibili?language=objc)
 （A string made by normalizing the receiver’s contents using the Unicode Normalization Form KC.）
 
-####拆叠字符串（Folding Strings）
+#### 拆叠字符串（Folding Strings）
 
 [- stringByFoldingWithOptions:locale:](https://developer.apple.com/documentation/foundation/nsstring/1413779-stringbyfoldingwithoptions?language=objc)
 （Creates a string suitable for comparison by removing the specified character distinctions from a string.）
 
-####转换字符串（Transforming Strings）
+#### 转换字符串（Transforming Strings）
 
 [- stringByApplyingTransform:reverse:](https://developer.apple.com/documentation/foundation/nsstring/1407787-stringbyapplyingtransform?language=objc)
 （Returns a new string by applying a specified transform to the string.）
@@ -264,7 +264,7 @@
 [NSStringTransform](https://developer.apple.com/documentation/foundation/nsstringtransform?language=objc)
 （Constants representing an ICU string transform.）
 
-####查找字符和子字符串（Finding Characters and Substrings）
+#### 查找字符和子字符串（Finding Characters and Substrings）
 
 [- containsString:](https://developer.apple.com/documentation/foundation/nsstring/1414563-containsstring?language=objc)
 查找字符串中是否包含“xxx”：方法区分小写字母（Returns a Boolean value indicating whether the string contains a given string by performing a case-sensitive, locale-unaware search.）
@@ -305,7 +305,7 @@
 [- enumerateSubstringsInRange:options:usingBlock:](https://developer.apple.com/documentation/foundation/nsstring/1416774-enumeratesubstringsinrange?language=objc)
 枚举指定字符串范围内指定类型的子字符串（Enumerates the substrings of the specified type in the specified range of the string.）
 
-####替换子字符串（Replacing Substrings）
+#### 替换子字符串（Replacing Substrings）
 
 [- stringByReplacingOccurrencesOfString:withString:](https://developer.apple.com/documentation/foundation/nsstring/1412937-stringbyreplacingoccurrencesofst?language=objc)
 （Returns a new string in which all occurrences of a target string in the receiver are replaced by another given string.）
@@ -319,12 +319,12 @@
 [- stringByReplacingCharactersInRange:withString:](https://developer.apple.com/documentation/foundation/nsstring/1410029-stringbyreplacingcharactersinran?language=objc)
 （Returns a new string in which the characters in a specified range of the receiver are replaced by a given string.）
 
-####获取公共的前缀（Getting a Shared Prefix）
+#### 获取公共的前缀（Getting a Shared Prefix）
 
 [- commonPrefixWithString:options:](https://developer.apple.com/documentation/foundation/nsstring/1408169-commonprefixwithstring?language=objc)
 （Returns a string containing characters the receiver and a given string have in common, starting from the beginning of each up to the first characters that aren’t equivalent.）
 
-####语言标记分析（Performing Linguistic Analysis）
+#### 语言标记分析（Performing Linguistic Analysis）
 
 [- enumerateLinguisticTagsInRange:scheme:options:orthography:usingBlock:](https://developer.apple.com/documentation/foundation/nsstring/1412161-enumeratelinguistictagsinrange?language=objc)
 （Performs linguistic analysis on the specified string by enumerating the specific range of the string, providing the Block with the located tags.）
@@ -335,7 +335,7 @@
 [NSStringEnumerationOptions](https://developer.apple.com/documentation/foundation/nsstringenumerationoptions?language=objc)
 （Constants to specify kinds of substrings and styles of enumeration.）
 
-####确定组成字符的顺序（Determining Line and Paragraph Ranges）
+#### 确定组成字符的顺序（Determining Line and Paragraph Ranges）
 
 [- getLineStart:end:contentsEnd:forRange:](https://developer.apple.com/documentation/foundation/nsstring/1415111-getlinestart?language=objc)
 （Returns by reference the beginning of the first line and the end of the last line touched by the given range.）
@@ -349,7 +349,7 @@
 [- paragraphRangeForRange:](https://developer.apple.com/documentation/foundation/nsstring/1408548-paragraphrangeforrange?language=objc)
 （Returns the range of characters representing the paragraph or paragraphs containing a given range.）
 
-####确定组成字符的顺序（Determining Composed Character Sequences）
+#### 确定组成字符的顺序（Determining Composed Character Sequences）
 
 [- rangeOfComposedCharacterSequenceAtIndex:](https://developer.apple.com/documentation/foundation/nsstring/1416036-rangeofcomposedcharactersequence?language=objc)
 （Returns the range in the receiver of the composed character sequence located at a given index.）
@@ -357,7 +357,7 @@
 [- rangeOfComposedCharacterSequencesForRange:](https://developer.apple.com/documentation/foundation/nsstring/1410993-rangeofcomposedcharactersequence?language=objc)
 （Returns the range in the string of the composed character sequences for a given range.）
 
-####写入文件或URL(Writing to a File or URL)
+#### 写入文件或URL(Writing to a File or URL)
 
 [- writeToFile:atomically:encoding:error:](https://developer.apple.com/documentation/foundation/nsstring/1407654-writetofile?language=objc)
 （Writes the contents of the receiver to a file at a given path using a given encoding.）
@@ -365,7 +365,7 @@
 [- writeToURL:atomically:encoding:error:](https://developer.apple.com/documentation/foundation/nsstring/1417341-writetourl?language=objc)
 （Writes the contents of the receiver to the URL specified by url using the specified encoding.）
 
-####将字符串内容转换成属性列表（Converting String Contents Into a Property List）
+#### 将字符串内容转换成属性列表（Converting String Contents Into a Property List）
 
 [- propertyList](https://developer.apple.com/documentation/foundation/nsstring/1413115-propertylist?language=objc)
 （Parses the receiver as a text representation of a property list, returning an NSString, NSData, NSArray, or NSDictionary object, according to the topmost element.）
@@ -373,7 +373,7 @@
 [- propertyListFromStringsFileFormat]（https://developer.apple.com/documentation/foundation/nsstring/1407697-propertylistfromstringsfileforma?language=objc)
 (Returns a dictionary object initialized with the keys and values found in the receiver.）
 
-####尺寸和绘图字符串(Sizing and Drawing Strings)
+#### 尺寸和绘图字符串(Sizing and Drawing Strings)
 
 [- drawAtPoint:withAttributes:](https://developer.apple.com/documentation/foundation/nsstring/1533109-drawatpoint?language=objc)
 （Draws the receiver with the font and other display characteristics of the given attributes, at the specified point in the current graphics context.）
@@ -396,9 +396,9 @@
 [NSStringDrawingOptions](https://developer.apple.com/documentation/uikit/nsstringdrawingoptions?language=objc)
 （Constants for the rendering options for a string when it is drawn.）
 
-####[字符串转换（Getting Numeric Values）](https://developer.apple.com/documentation/foundation/nsstring/1414031-doublevalue?language=objc)
+#### [字符串转换（Getting Numeric Values）](https://developer.apple.com/documentation/foundation/nsstring/1414031-doublevalue?language=objc)
 
-####处理字符编码（Working with Encodings）
+#### 处理字符编码（Working with Encodings）
 
 [availableStringEncodings](https://developer.apple.com/documentation/foundation/nsstring/1417579-availablestringencodings?language=objc)
 （Returns a zero-terminated list of the encodings string objects support in the application’s environment.）
@@ -439,7 +439,7 @@
 [NSStringEncodingDetectionOptionsKey](https://developer.apple.com/documentation/foundation/nsstringencodingdetectionoptionskey?language=objc)
 没有概述（No overview available.）
 
-####处理路径（Working with Paths）
+#### 处理路径（Working with Paths）
 
 [+ pathWithComponents:](https://developer.apple.com/documentation/foundation/nsstring/1417198-pathwithcomponents?language=objc)
 （Returns a string built from the strings in a given array by concatenating them with a path separator between each pair.）
@@ -492,7 +492,7 @@
 [- stringsByAppendingPaths:](https://developer.apple.com/documentation/foundation/nsstring/1415100-stringsbyappendingpaths?language=objc)
 （Returns an array of strings made by separately appending to the receiver each string in a given array.）
 
-####处理URL（Working with URL Strings）
+#### 处理URL（Working with URL Strings）
 
 [- stringByAddingPercentEncodingWithAllowedCharacters:](https://developer.apple.com/documentation/foundation/nsstring/1411946-stringbyaddingpercentencodingwit?language=objc)
 （Returns a new string made from the receiver by replacing all characters not in the specified set with percent-encoded characters.）
@@ -501,4 +501,4 @@
 （Returns a new string made from the receiver by replacing all percent encoded sequences with the matching UTF-8 characters.）
 
 
-###最后,觉得有用记得给个star✨!非常感谢!
+### 最后,觉得有用记得给个star✨!非常感谢!
